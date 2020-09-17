@@ -1,8 +1,5 @@
 # [Day02] ECMAScript 與 Javascript
 
-> 你說你學的是 Javascript ，我說我 follow ES 標準來開發。  
-> 我們 到底是不是同路人?
-
 ## 認識 Ecma International
 
 ![ecma](https://ecma-international.org/images/logo_printerf.jpg)
