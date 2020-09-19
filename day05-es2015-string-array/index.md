@@ -1,5 +1,4 @@
-[Day04] ES2015(ES6) - 字串與陣列
-
+[Day11] 
 # template string
 
 # includes
