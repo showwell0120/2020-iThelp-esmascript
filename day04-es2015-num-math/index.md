@@ -1,4 +1,4 @@
-# [Day04] ES2015(ES6) - 數值與數學運算
+# [Day04] ES2015(ES6) - 數值 (Number & Math)
 
 ES2015在數值的判斷與運算多了很多擴充，還包含新的型別 `BigInt`的推出。今天就整理出幾個覺得比較常用和基本的特性。想要了解更多的，可以再前往底下的參考資源查看喔！
 
@@ -77,9 +77,10 @@ Math.trunc('null') // NaN
 
 在ES2015後，鼓勵是以模組化的方式開發，其中就包含降低全域方法的使用。所以像是`parseInt()`和`parseFloat()`，在Number物件裡也有實現同樣的方法。
 
-### `Number.parseInt(numStr:string, radix:number)`
+### `Number.parseInt(numStr:string, radix?:number)`
 
-將輸入的字串轉成整數。如果無法轉為數值，則回傳`NaN`。
+將輸入的字串轉成整數。如果無法轉為數值，則回傳`NaN`。   
+`radix`指的是從2 ~ 36的進位系統指定。
 
 ```javascript
 Number.parseInt('-532');  //-532
