@@ -1,11 +1,27 @@
-[Day06] ES2015(ES6) - 陣列與特定集合
+# [Day07] ES2015(ES6) - 物件(Object)與特定集合(Set & Mapß)
 
-# Set
+## 物件 (Object)
 
-# Map
+### 新增屬性
 
-# Symbol
+### 靜態方法
 
-# for in
+### `Object.is()`
 
-# Object.keys
+#### `Object.assign()`
+
+#### Object Iterator (物件迭代器)
+
+- `object.keys`
+- `object.values`
+- `object.entries`
+
+- `for ... in`
+
+## Set
+
+## Map
+
+## 小結
+
+## 參考資源
