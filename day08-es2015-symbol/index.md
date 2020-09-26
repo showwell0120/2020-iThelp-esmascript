@@ -1,4 +1,4 @@
-# [Day08] ES2015(ES6) - Symbol
+# [Day08] ES2015(ES6) & ES2019(ES10) - Symbol
 
 Symbol 是在 ES2015 中新增加的內建資料型態。今天就來認識新面孔，並且了解基本應用吧!
 
@@ -23,7 +23,9 @@ typeof s; // symbol
 console.log(s === s1); // false
 ```
 
-在宣告`Symbol`的變數時，可選擇性的傳入關於變數的描述。並且以 `smbl.description` 取得描述。
+在宣告`Symbol`的變數時，可選擇性的傳入關於變數的描述。
+
+在 ES2019 後，可以 smbl.description 取得描述。
 
 ```javascript
 const s = Symbol("One Punch Man");
