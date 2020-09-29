@@ -82,19 +82,68 @@ for (let v of nodeList) {
 
 ## 產生器(Generator)
 
+generator 是在 ES2015 中提出全新的函式類型。
+
+在一般的函式，每次的調用都會從頭開始執行，並回傳一種結果，或是不回傳。而 generator 的機制就像上面提到的迭代器一樣，每次的函式調用，並不是單純執行函式，而是回傳 generator 物件，並從下一個指向的地方開始執行，並且回傳不同的執行結果。
+
 ### `function* fnName() {...}`
 
+要宣告 generator 的函式，必須以`function`開頭，並加上 `*`。
+
+```javascript
+function* generatorFn() {
+  //...
+}
+```
+
 ### `yield` & `next()`
+
+在 generator 裡，以 `yield`的作陳述句的前綴字，在 generator 物件中，如果要取得下個陳述句的回傳結果，則執行物件的內建方法 `next()`。
+
+而回傳結果會被封裝成以下形式的物件：
+
+```typescript
+{
+  done: boolean, // 回傳是否以執行完return
+  value: any  // 陳述句的執行結果
+}
+```
+
+```javascript
+// 宣告 generator function
+function* generatorFn() {
+  yield 1;
+  yield 2;
+  return "done";
+}
+// 建立 generator 的物件
+const gen1 = generatorFn();
+const r1 = gen1.next(); // Object { done: false, value: 1 }
+const r2 = gen1.next(); // Object { done: false, value: 2 }
+const r3 = gen1.next(); // Object { done: true, value: "done" }
+```
+
+### `for ... of`
+
+在上面提到 generator 也是可迭代的物件之一。所以我們也可以使用 for ... of 來遍歷執行結果。
+
+```javascript
+for (const v of generatorFn()) {
+  console.log(v);
+}
+// 1
+// 2
+```
 
 ### 使用時機與延伸
 
 - **減少額外變數，降低記憶體使用**：由 `yield*`進行委派，在這之後的產生器或可迭代物件執行迭代的行為
-- **改變執行結果**：以 `next` 傳入取代
-- `redux-saga`
+- **改變執行結果**：以 `next` 傳入值，取代上一個 yield 陳述式的執行結果
+- **`redux-saga`**：比起 以 promise 處理非同步的 `redux-thunk`的架構更加獨立，方便測試。也更貼近非同步存取資料的特性。
 
 ## 小結
 
-今天忙交屋擠不出時間寫嗚嗚，會再趕快補上！
+因為第一次接觸到 generator，所以對於應用上還是有點生疏。如果有使用過的人歡迎跟我分享使用經驗喔！
 
 ## 參考資源
 
