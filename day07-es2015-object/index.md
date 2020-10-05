@@ -118,11 +118,9 @@ console.log(target1); // {a: 1, b: 2}
 
 ### Object Iterator (物件迭代器)
 
-跟昨天提到的陣列迭代器一樣，ES2015 也為物件提供相似的方法來迭代可列舉屬性。根據回傳的內容不同有以下三個方法可使用
+跟昨天提到的陣列迭代器一樣，ES2015 也為物件提供相似的方法來迭代可列舉屬性。
 
 - `Object.keys`: 依序將每個屬性的名稱存到陣列
-- `Object.values`: 依序將每個屬性的值存到陣列
-- `Object.entries`: 依序將每個屬性的名稱與值存到陣列 A，再把陣列 A 存到陣列 B
 
 ```javascript
 const object1 = {
@@ -130,8 +128,6 @@ const object1 = {
   b: 42,
 };
 Object.keys(object1); // ["a", "b"]
-Object.values(object1); // ["somestring", 42]
-Object.entries(object1); // [["a", "somestring"], ["b", 42]]
 ```
 
 ## 小結
