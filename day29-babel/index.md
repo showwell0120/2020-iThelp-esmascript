@@ -75,3 +75,4 @@
 
 - [Plugins - Babel](https://babeljs.io/docs/en/plugins/)
 - [@babel/preset-env - Babel](https://babeljs.io/docs/en/babel-preset-env)
+- [7.11.0 Released: ECMAScript 2021 support in preset-env, TypeScript 4.0 support, printing config and the future of `babel-eslint`](https://babeljs.io/blog/2020/07/30/7.11.0)
