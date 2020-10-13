@@ -43,7 +43,7 @@
 - optional-catch-binding
 - unicode-property-regex
 
-## Modules
+### Modules
 
 - modules-amd
 - modules-commonjs
