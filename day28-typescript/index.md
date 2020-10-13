@@ -1,6 +1,6 @@
 # [Day28] Typescript (tsconfig.json)
 
-## compilerOptions
+## `compilerOptions`
 
 ### `lib`
 
@@ -10,9 +10,9 @@
 
 ### `allowSyntheticDefaultImports`
 
-#### `experimentalDecorators`
+### `experimentalDecorators`
 
-#### `emitDecoratorMetadata`
+### `emitDecoratorMetadata`
 
 ## 參考資源
 
